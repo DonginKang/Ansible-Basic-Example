@@ -1,0 +1,12 @@
+- name: "Cisco IOS Test"
+  hosts: ios_01
+  gather_facts: no
+
+  tasks:
+  - name: show command
+    ios_command:
+      commands:
+        - show version
+      wait_for:
+        - result[0] contains IOS
+
