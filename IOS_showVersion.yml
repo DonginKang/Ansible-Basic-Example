@@ -1,5 +1,5 @@
 - name: "Cisco IOS Test"
-  hosts: ios_01
+  hosts: 192.168.0.199
   gather_facts: no
 
   tasks:
