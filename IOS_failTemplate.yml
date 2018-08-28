@@ -1,0 +1,14 @@
+- name: "Cisco IOS Test"
+  hosts: 192.168.0.199
+  gather_facts: no
+
+  tasks:
+  - name: show command
+    ios_command:
+      commands:
+        - show versio2on
+      wait_for:
+        - result[0] contains IOS
+    register: output
+    
+  - debug: var=output
