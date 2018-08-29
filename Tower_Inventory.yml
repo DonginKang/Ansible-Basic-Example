@@ -9,5 +9,5 @@
         description: "Just Test"
         organization: "Default"
         state: present # absent = delete
-        #tower_config_file: "~/tower_cli.cfg"
+        tower_config_file: "~/tower_cli.cfg"
 
