@@ -2,10 +2,11 @@
   hosts: 127.0.0.1
   gather_facts: no
 
-- name: Add tower inventory
-  tower_inventory:
-    name: "Tower Inventory Test"
-    description: "Just Test"
-    organization: "Default"
-    state: present # absent = delete
-    #tower_config_file: "~/tower_cli.cfg"
+-tasks:
+  - name: Add tower inventory
+    tower_inventory:
+      name: "Tower Inventory Test"
+      description: "Just Test"
+      organization: "Default"
+      state: present # absent = delete
+      #tower_config_file: "~/tower_cli.cfg"
