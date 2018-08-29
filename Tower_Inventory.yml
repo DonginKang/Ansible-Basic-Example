@@ -1,7 +1,11 @@
+- name: "Tower Inventory Test"
+  hosts: 127.0.0.1
+  gather_facts: no
+
 - name: Add tower inventory
   tower_inventory:
-    name: "Foo Inventory"
-    description: "Our Foo Cloud Servers"
-    organization: "Bar Org"
-    state: present
-    tower_config_file: "~/tower_cli.cfg"
+    name: "Tower Inventory Test"
+    description: "Just Test"
+    organization: "Default"
+    state: present # absent = delete
+    #tower_config_file: "~/tower_cli.cfg"
