@@ -10,3 +10,4 @@
         inventory: "Tower Inventory Test"
         state: present # absent = delete
         tower_config_file: "/var/lib/awx/.tower_cli.cfg"
+        variables: {ip: 192.168.0.1}
