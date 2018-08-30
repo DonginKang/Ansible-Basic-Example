@@ -8,6 +8,7 @@
         name: "Tower Host Test"
         description: "Just Host Test"
         inventory: "Tower Inventory Test"
+        tower_host: 192.168.0.10
         state: present # absent = delete
         tower_config_file: "/var/lib/awx/.tower_cli.cfg"
         variables: {host: real}
