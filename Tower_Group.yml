@@ -1,0 +1,12 @@
+- name: "Tower Inventory Test"
+  hosts: 127.0.0.1
+  gather_facts: no
+
+  tasks:
+    - name: Add tower inventory
+      tower_group:
+        name: "Tower Inventory Test"
+        description: "Just GRroup Test"
+        inventory: "Tower Inventory Test"
+        state: present # absent = delete
+        tower_config_file: "/var/lib/awx/.tower_cli.cfg"
