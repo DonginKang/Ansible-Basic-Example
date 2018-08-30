@@ -5,7 +5,7 @@
   tasks:
     - name: Add tower inventory
       tower_group:
-        name: "Tower Inventory Test"
+        name: "Tower Group Test"
         description: "Just GRroup Test"
         inventory: "Tower Inventory Test"
         state: present # absent = delete
