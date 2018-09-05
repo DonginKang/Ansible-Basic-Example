@@ -1,6 +1,6 @@
 - name: "Cisco IOS Test"
   hosts: 192.168.0.199
-  gather_facts: no
+  #gather_facts: no
 
   tasks:
   - name: show command
