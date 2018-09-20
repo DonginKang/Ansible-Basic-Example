@@ -1,0 +1,25 @@
+- name: "URI TEST"
+  hosts: 192.168.0.53
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: Create User
+    uri:
+      url: http://192.168.0.53/api/v2/users/
+      method: POST
+      body_format: json
+      force_basic_auth: yes
+      headers:
+        Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+      body:
+        username: "uri"
+        first_name: "dong"
+        last_name: "in"
+        email: "ss@ss.com"
+        password: "ssss"
+      status_code: 201  # default: 200, When client receive 201, ansible judges this is success. 
+      #return_content: true  # useless..?
+    register: result
+
+  - debug: var=result
