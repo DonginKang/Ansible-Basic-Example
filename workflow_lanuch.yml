@@ -1,0 +1,29 @@
+- name: "URI TEST"
+  hosts: 192.168.0.53
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: launch workflow 60
+    uri:
+      url: http://192.168.0.60/api/v2/workflow_job_templates/8/launch/
+      method: POST
+      body_format: json
+      #force_basic_auth: yes
+      headers:
+        Authorization: Bearer 8sIQJKNRnSbqGkxx6vaRRmXKgwqHWH
+      body:
+        name: test
+      status_code: 201
+      #return_content: true
+  - name: launch workflow 61
+    uri:
+      url: http://192.168.0.61/api/v2/workflow_job_templates/8/launch/
+      method: POST
+      body_format: json
+      #force_basic_auth: yes
+      headers:
+        Authorization: Bearer 8sIQJKNRnSbqGkxx6vaRRmXKgwqHWH
+      body:
+        name: test
+      status_code: 201
